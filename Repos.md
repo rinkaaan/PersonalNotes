@@ -17,4 +17,3 @@
 ## Libraries
 
 - [Python Utils](https://github.com/rinkaaan/PythonUtils)
-- [Shell Scripts](https://github.com/rinkaaan/ShellScripts)
