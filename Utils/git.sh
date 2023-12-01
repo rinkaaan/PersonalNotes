@@ -25,3 +25,28 @@ reauthor-all() {
     )
   done
 }
+
+add-submodules() {
+  for repo in $@; do
+    echo "Adding submodule $repo"
+    git submodule add "git@github.com:rinkaaan/$repo.git" "$repo"
+  done
+  git submodule update --init --recursive
+}
+
+force-push() {
+  find . -type d -maxdepth 1 ! -name ".*" | while read -r dir; do
+    (
+      cd "$dir" || exit
+      if git rev-parse --is-inside-work-tree &>/dev/null; then
+        echo "git push --force $(basename "$dir")"
+        git push --force
+      fi
+    )
+  done
+}
+
+publish-repo() {
+  gh repo create --public --source=. --remote=origin
+  git push --set-upstream origin main
+}
