@@ -27,7 +27,7 @@ reauthor-all() {
 }
 
 add-submodules() {
-  for repo in $@; do
+  for repo in "$@"; do
     echo "Adding submodule $repo"
     git submodule add "git@github.com:rinkaaan/$repo.git" "$repo"
   done
@@ -39,11 +39,14 @@ force-push() {
     (
       cd "$dir" || exit
       if git rev-parse --is-inside-work-tree &>/dev/null; then
-        echo "git push --force $(basename "$dir")"
         git push --force
       fi
     )
   done
+
+  if git rev-parse --is-inside-work-tree &>/dev/null; then
+    git push --force
+  fi
 }
 
 publish-repo() {
