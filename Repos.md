@@ -8,9 +8,7 @@
 - [Connexion SqlAlchemy](https://github.com/rinkaaan/ConnexionSqlAlchemyDemo)
 - [Postgres Docker Compose](https://github.com/rinkaaan/PostgresDockerComposeDemo)
 - [React Router User Auth](https://github.com/rinkaaan/ReactRouterUserAuthDemo)
-- Connexion User Auth
-  - [React App](https://github.com/rinkaaan/ConnexionUserAuthDemoReactApp)
-  - [API](https://github.com/rinkaaan/ConnexionUserAuthDemoApi)
+- [Connexion User Auth](https://github.com/rinkaaan/ConnexionUserAuthDemo)
 
 ## Libraries
 
