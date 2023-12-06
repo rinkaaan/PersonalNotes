@@ -43,7 +43,7 @@ git remote -v
 git remote remove origin
 
 # Add remote
-git remote add origin git@github.com:rinkaaan/aincrad.git 
+git remote add origin git@github.com:rinkaaan/aincrad.git
 git fetch origin
 
 # Push to new branch
@@ -51,3 +51,6 @@ git push origin HEAD:mainline2
 
 # Assume unchanged
 git update-index --assume-unchanged build.gradle.kts
+
+# Filemode
+git config core.filemode false
