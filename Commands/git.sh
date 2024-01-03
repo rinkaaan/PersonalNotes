@@ -2,6 +2,9 @@
 git config --global user.name "Lincoln Nguyen"
 git config --global user.email "137611486+rinkaaan@users.noreply.github.com"
 
+git config --global user.name "Lincoln Nguyen"
+git config --global user.email "nguylinc@amazon.com"
+
 # Remove all .env files from git history
 git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch **/\.env" HEAD
 # List all .env files in git history
