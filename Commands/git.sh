@@ -57,3 +57,6 @@ git update-index --assume-unchanged build.gradle.kts
 
 # Filemode
 git config core.filemode false
+
+# Rebase from root
+git rebase -i --root
