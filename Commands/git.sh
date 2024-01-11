@@ -60,3 +60,6 @@ git config core.filemode false
 
 # Rebase from root
 git rebase -i --root
+
+# Ignore submodule changes in git diff
+git config --global diff.ignoreSubmodules dirty
